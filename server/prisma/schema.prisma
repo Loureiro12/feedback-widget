@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Feedback {
-  id String @id
+  id String @id @default(uuid())
 
   types String
   comment String
@@ -19,3 +19,6 @@ model Feedback {
 
   @@map("feadbacks")
 }
+
+// Visualizar tabelas no navegador: npx prisma studio 
+// Criar tabela de dev: npx prisma migrate dev
